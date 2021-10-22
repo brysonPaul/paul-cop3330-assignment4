@@ -148,19 +148,13 @@ class ToDoListAppTest {
          list.addItem(new toDoItem("do the dishes",//date stuff))
          list.addItem(new toDoItem("walk dog",//date stuff))
          list.addItem(new toDoItem("get groceries",//date stuff))
-         list.save("test")
-         sc= new Scanner(test)
-         s=""
-         while sc.hasNextLine()
-            s+=sc.next()
-            end loop
-         Gson gson = new Gson()
-         ArrayList<> a = gson.fromGson(s)\
+         list.save("test.json")
+         ToDoList a = list.load("test.json")
 
          assertEquals(a.size(),list.toDoList.size())
          for x=0;x<a.length;x++
-            assertEquals(a.description,list.toDoList.description)
-            assertEquals(a.dueDate,list.toDoList.dueDate)
+            assertEquals(a.toDoList.get(x).description,list.toDoList.get(x).description)
+            assertEquals(a.toDoList.get(x).dueDate,list.toDoList.get(x).dueDate)
             end loop
          */
     }
@@ -211,37 +205,76 @@ class ToDoListAppTest {
     //toDoListManager
     @Test
     void addItemToToDoList() {
+        /*
+        ToDoListManager t = new ToDoListManager()
+        t.addToDoList(new ToDoList("testing 1 "))
+        t.addToDoList(new ToDoList("testing 2 "))
+        t.addToDoList(new ToDoList("testing 3"))
+
+        t.addItemToToDoList(1,new ToDoItem("e",new Date()))
+        t.addItemToToDoList(2,new ToDoItem("f",new Date()))
+        t.addItemToToDoList(2,new ToDoItem("g",new Date()))
+
+        assertEqual(t.toDoLists.get(0).toDoList,0)
+        assertEqual(t.toDoLists.get(1).toDoList,1)
+        assertEqual(t.toDoLists.get(2).toDoList,2)
+
+        assertEqual(t.toDoLists.get(1).toDoList(0),"e")
+        assertEqual(t.toDoLists.get(2).toDoList(0),"f")
+        assertEqual(t.toDoLists.get(2).toDoList(1),"g")
+
+        */
     }
     //toDoListManager
     @Test
     void removeItemFromToDoList() {
+        /*
+        ToDoListManager t = new ToDoListManager()
+        t.addToDoList(new ToDoList("testing 1 "))
+        t.addToDoList(new ToDoList("testing 2 "))
+        t.addToDoList(new ToDoList("testing 3"))
+
+        t.addItemToToDoList(1,new ToDoItem("e",new Date()))
+        t.addItemToToDoList(2,new ToDoItem("f",new Date()))
+        t.addItemToToDoList(2,new ToDoItem("g",new Date()))
+
+        t.removeItemFromToDoList(2,1)
+        t.removeItemFromToDoList(1,0);
+
+        assertEqual(t.toDoLists.get(0).toDoList,0)
+        assertEqual(t.toDoLists.get(1).toDoList,0)
+        assertEqual(t.toDoLists.get(2).toDoList,1)
+
+        assertEqual(t.toDoLists.get(2).toDoList(0),"g")
+         */
     }
     //toDoListManager
     @Test
-    void testDisplayExistingItems() {
+    void saveAndLoadSingleToDoList() {//contains saving and loading tests
+        /*
+         ToDoListManager tm= new ToDoListManager()
+
+         toDoList list = new toDoList()
+         list.addItem(new toDoItem("do the dishes",//date stuff))
+         list.addItem(new toDoItem("walk dog",//date stuff))
+         list.addItem(new toDoItem("get groceries",//date stuff))
+         tm.addToDoList(list)
+
+         tm.saveSingleToDoList(0,"test.txt")
+         toDoList testList = loadSingleToDoList("test.txt")
+
+         assertEquals(testList.toDoList.size(),tm.get(0).toDoList.size())
+         for x=0;x<a.length;x++
+            assertEquals(testList.toDoList.get(x).description, tm.get(0).toDoList.get(x).description)
+            assertEquals(testList.toDoList.get(x).dueDate, tm.get(0).toDoList.get(x).dueDate)
+            end loop
+         */
     }
     //toDoListManager
     @Test
-    void testDisplayCompletedItems() {
-    }
-    //toDoListManager
-    @Test
-    void testDisplayIncompleteItems() {
-    }
-    //toDoListManager
-    @Test
-    void saveSingleToDoList() {
-    }
-    //toDoListManager
-    @Test
-    void saveAllToDoLists() {
-    }
-    //toDoListManager
-    @Test
-    void loadSingleToDoList() {
-    }
-    //toDoListManager
-    @Test
-    void loadAllToDoLists() {
+    void saveAndLoadAllToDoLists() {//contains saving and loading tests
+        /*
+
+         */
     }
 }

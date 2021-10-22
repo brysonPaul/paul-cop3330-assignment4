@@ -39,21 +39,6 @@ public class ToDoListManager
             toDoLists.get(toDoIndex).remove(itemIndex)
          */
     }
-    public void displayExistingItems(int index){
-     /*
-        toDoLists.get(x).displayExistingItems()
-      */
-    }
-    public void displayCompletedItems(int index){
-     /*
-        toDoLists.get(x).displayCompletedItems()
-      */
-    }
-    public void displayIncompleteItems(int index){
-     /*
-        toDoLists.get(x).displayIncompleteItems()
-      */
-    }
     public void saveSingleToDoList(int index, String path){
     /*
         toDoLists.get(index).saveToDoList(path)
@@ -69,9 +54,9 @@ public class ToDoListManager
         fw.write(s)
          */
     }
-    public void loadSingleToDoList(int index, String path){//made it void because it is going right into the arrayList
+    public void loadSingleToDoList( String path){//made it void because it is going right into the arrayList
         /*
-        toDoLists.add(toDoLists.get(index).loadToDoList(path))
+        toDoLists.add(loadToDoList(path))
          */
     }
     public void loadAllToDoLists(int index, String path){

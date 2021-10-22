@@ -120,8 +120,14 @@ public class ToDoList {
     //for single to do list
     public ToDoList loadToDoList(String path){
         /*
+        File f= new File(path);
+        sc= new Scanner(f)
+        s = " "
+        while sc.hasNextLine
+            s+=sc.next
+        end loop
         Gson gson = new Gson()
-        return gson.fromJson(path)
+        return gson.fromJson(s)
          */
         return new ToDoList();
     }
