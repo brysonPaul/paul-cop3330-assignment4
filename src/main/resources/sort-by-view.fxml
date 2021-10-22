@@ -5,10 +5,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="sortByPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.SortByViewController">
    <children>
-      <Button layoutY="2.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="96.0" text="Back">
+      <Button fx:id="backButton" layoutY="2.0" mnemonicParsing="false" onAction="#loadToDoListView" prefHeight="33.0" prefWidth="96.0" text="Back">
          <font>
             <Font size="18.0" />
          </font>
