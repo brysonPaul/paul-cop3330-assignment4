@@ -263,7 +263,7 @@ class ToDoListAppTest {
          tm.saveSingleToDoList(0,"test.txt")
          toDoList testList = loadSingleToDoList("test.txt")
 
-         assertEquals(testList.toDoList.size(),tm.get(0).toDoList.size())
+         assertEquals(testList.toDoList.size(),tm.toDoLists.get(0).toDoList.size())
          for x=0;x<a.length;x++
             assertEquals(testList.toDoList.get(x).description, tm.get(0).toDoList.get(x).description)
             assertEquals(testList.toDoList.get(x).dueDate, tm.get(0).toDoList.get(x).dueDate)
@@ -274,6 +274,22 @@ class ToDoListAppTest {
     @Test
     void saveAndLoadAllToDoLists() {//contains saving and loading tests
         /*
+             ToDoListManager tm = new ToDoListManager()
+             toDoList list = new toDoList()
+             list.addItem(new toDoItem("do the dishes",//date stuff))
+             list.addItem(new toDoItem("walk dog",//date stuff))
+             list.addItem(new toDoItem("get groceries",//date stuff))
+             tm.addToDoList(list)
+
+             tm.saveALlToDoLists("testAll.txt")
+             ToDoListManager test = tm.loadAllToDoLists("testAll.txt")
+             assertEquals(s.toDoLists.size(),tm.toDoLists.size())
+             assertEquals(s.toDoLists(0).size(),tm.toDoLists(0).size())
+
+             for x=0;x<a.length;x++
+                assertEquals(test.toDoLists.get(0).toDoList.get(x).description, tm.toDoLists.get(0).toDoList.get(x).description)
+                assertEquals(test.toDoLists.get(0).toDoList.get(x).dueDate, tm.toDoLists.get(0).toDoList.get(x).dueDate)
+            end loop
 
          */
     }

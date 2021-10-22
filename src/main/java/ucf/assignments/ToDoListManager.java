@@ -28,7 +28,6 @@ public class ToDoListManager
             toDoLists.get(index).setTitle(title)
          */
     }
-
     public void AddItemToToDoList(int index, ToDoItem item){
         /*
             toDoLists.get(index).addItem(item)
@@ -44,27 +43,30 @@ public class ToDoListManager
         toDoLists.get(index).saveToDoList(path)
      */
     }
-    public void saveAllToDoLists(){
-        /*
-        String s = ""
-        for ToDoList t in toDoLists
-            s+=t.saveToDoList()
-        end loop
-        fw = new FileWriter()
-        fw.write(s)
-         */
-    }
     public void loadSingleToDoList( String path){//made it void because it is going right into the arrayList
         /*
         toDoLists.add(loadToDoList(path))
          */
     }
-    public void loadAllToDoLists(int index, String path){
+    public void saveAllToDoLists(String path){
         /*
-        ArrayList<ToDoList> t = toDoLists.get(index).loadToDoList(path)
-        for ToDoList x in t
-            toDoLists.add(x)
-        end loop
+        File f = new File(path)
+        Gson gson = new Gson()
+        String s = gson.toGson(this)
+        FileWriter fw = new FileWriter(f)
+        fw.write(s)
          */
+    }
+    public void loadAllToDoLists(String path){
+       /*
+       File f = new File(path)
+       Scanner sc= new Scanner(f)
+       Gson gson = new Gson()
+       s = ""
+       while sc.hasNext()
+            s+=sc.next
+       end loop
+       this = gson.fromGson(s)
+        */
     }
 }
