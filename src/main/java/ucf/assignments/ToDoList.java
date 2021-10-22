@@ -16,16 +16,23 @@ public class ToDoList {
         this.toDoList = new ArrayList<>()
          */
     }
+    public ToDoList(String title){
+        /*
+        this.title =title
+        this.toDoList = new ArrayList<>()
+         */
+    }
 
     public void addItem(ToDoItem t){
         /*
             toDoList.add(t)
          */
     }
-    public void removeItem(int index){
+    public ToDoItem removeItem(int index){
         /*
-            toDoList.remove(index)
+           return toDoList.remove(index)
          */
+        return new ToDoItem("",new Date());
     }
     public void setTitle(String s){
         /*
@@ -48,28 +55,51 @@ public class ToDoList {
         toDoList.get(index).markAsComplete();
          */
     }
-    public void displayExistingItems(int index){
-     /*
-        for ToDoItem i in this.toDoList
-            i.display()
-        end loop
+    public void displayExistingItems(){
+        /*
+        displayItems(this.toDoList);
       */
     }
-    public void displayCompletedItems(int index){
+    public void displayCompletedItems(){
      /*
+        ArrayList<ToDoItem> a = sortByCompleteItems(this.toDoList)
+        displayItems(a)
+      */
+    }
+    public void displayIncompleteItems(){
+     /*
+        ArrayList<ToDoItem> a = sortByIncompleteItems(this.toDoList)
+        displayItems(a)
+      */
+    }
+    public ArrayList<ToDoItem> sortByCompleteItems(){
+        /*
+        ArrayList<ToDoItem> aList= new ArrayList<>()
         for ToDoItem i in this.toDoList
             if i.isComplete()
-                i.display()
+                aList.add(i);
             end if
         end loop
+        return aList
       */
+        return new ArrayList<>();
     }
-    public void displayIncompleteItems(int index){
-     /*
+    public ArrayList<ToDoItem> sortByIncompleteItems(){
+        /*
+        ArrayList<ToDoItem> aList= new ArrayList<>()
         for ToDoItem i in this.toDoList
             if !i.isComplete()
-                i.display()
+                aList.add(i);
             end if
+        end loop
+        return aList
+      */
+        return new ArrayList<>();
+    }
+    public void displayItems(ArrayList<ToDoItem> i){
+        /*
+        for ToDoItem item in i
+            item.display()
         end loop
       */
     }

@@ -17,10 +17,11 @@ public class ToDoListManager
             toDoLists.add(t)
          */
     }
-    public void removeToDoList(int index){
+    public ToDoList removeToDoList(int index){
         /*
-            toDoLists.remove(index);
+            return toDoLists.remove(index);
          */
+        return new ToDoList();
     }
     public void editToDoListTitle(int index, String title) {
         /*

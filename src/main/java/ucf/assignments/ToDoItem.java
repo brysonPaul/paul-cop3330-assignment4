@@ -10,7 +10,7 @@ public class ToDoItem {
     public String description;
     public Date dueDate;
     public boolean isComplete;
-    public ToDoItem(String title, String description, Date dueDate){
+    public ToDoItem(String title,Date dueDate){
         /*
         this.description = description
         this.dueDate = dueDate
