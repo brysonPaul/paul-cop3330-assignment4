@@ -2,7 +2,10 @@ package ucf.assignments;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
-
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solution
+ *  Copyright 2021 Bryson Paul
+ */
 public class ToDoListManager
 {
     public ArrayList<ToDoList> toDoLists;//arrayList used to support at least 100 to do lists
